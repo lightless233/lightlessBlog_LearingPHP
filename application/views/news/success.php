@@ -1,0 +1,1 @@
+<h2>Create news success.</h2>

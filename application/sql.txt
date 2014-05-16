@@ -1,0 +1,25 @@
+CREATE TABLE Lightless_User(
+	UserID integer(4) NOT NULL AUTO_INCREMENT,
+	UserName varchar(32) NOT NULL,
+	Password varchar(32) NOT NULL,
+	PRIMARY KEY (UserID)
+);
+
+CREATE TABLE Lightless_Article(
+	ArticleID integer(16) NOT NULL AUTO_INCREMENT,
+	ArticleTitle varchar(255) NOT NULL,
+	ArticleContent  text NOT NULL,
+	PublishDate datetime NOT NULL,
+	EditDate datetime NOT NULL,
+	CommentsNumber integer(16) NOT NULL,
+	PRIMARY KEY (ArticleID)
+);
+
+CREATE TABLE Lightless_Comments(
+	CommentID integer(16) NOT NULL AUTO_INCREMENT,
+	ArticleID integer(16) NOT NULL,
+	CommentContent text NOT NULL,
+	UserEmail varchar(255) NOT NULL,
+	PublishDate datetime NOT NULL,
+	PRIMARY KEY (CommentID)
+);
